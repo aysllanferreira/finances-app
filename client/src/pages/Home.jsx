@@ -1,9 +1,23 @@
 import React from 'react';
 import './Home.scss';
 
+import {
+  // Benefits,
+  // Contact,
+  // Examples,
+  // Features,
+  // Footer,
+  // Hero,
+  Navbar,
+  // Pricing,
+  // Testimonial,
+} from '../components';
+
 function Home() {
   return (
-    <div>Home</div>
+    <div className="Home">
+      <Navbar />
+    </div>
   );
 }
 

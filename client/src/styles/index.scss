@@ -11,3 +11,12 @@ body{
   color: $text;
   font-family: 'Raleway', sans-serif;
 }
+
+.container{
+  width: 85%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1024px){
+    width: 100%;
+  }
+}
