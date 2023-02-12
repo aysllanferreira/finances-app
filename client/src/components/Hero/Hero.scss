@@ -1,8 +1,57 @@
-@use '../../styles/variables.scss';
+@use '../../styles/variables.scss' as *;
 
 .Hero{
-  background-image: url('../../assets/images/architecture.jpg');
+  background-image: url('../../assets/images/business.jpg');
   background-size: cover;
+  // fit
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   width: 100%;
   height: 100vh;
+  filter: brightness(0.6);
+}
+
+.Hero_Content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $text;
+  z-index: 3;
+  width: 100%;
+
+  &__title{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    // stroke text border
+    -webkit-text-stroke: 0.1px $text;
+  }
+
+  &__subtitle{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    -webkit-text-stroke: 0.5px $text;
+  }
+
+  &__button{
+    background-color: $quaternary;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.5rem;
+    color: $text2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 3rem;
+
+    &:hover{
+      background-color: $quaternary-light;
+      color: $text2;
+    }
+  }
 }

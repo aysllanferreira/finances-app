@@ -6,7 +6,7 @@ import {
   // Contact,
   // Examples,
   // Features,
-  Footer,
+  // Footer,
   Hero,
   Navbar,
   // Pricing,
@@ -18,7 +18,6 @@ function Home() {
     <div className="Home">
       <Navbar />
       <Hero />
-      <Footer />
     </div>
   );
 }
