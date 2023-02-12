@@ -3,7 +3,12 @@ import './Hero.scss';
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <div>
+      <div className="Hero" id="home" />
+      <div>
+        Hero
+      </div>
+    </div>
   );
 }
 

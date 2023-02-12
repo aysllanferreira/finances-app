@@ -16,7 +16,7 @@ const navItems = [
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="Navbar container">
+    <nav className="Navbar">
       <div className="Navbar__logo">
         <Link to="/">Finance Star</Link>
       </div>
