@@ -14,7 +14,7 @@ function Features() {
         {featuresCards.map(({ icon, title, content }) => (
           <div className="Features__cards__card">
             <div className="Features__cards__card__icon">{icon}</div>
-            <h3 className="Features__cards__card__title">{title}</h3>
+            <h3 className="Features__cards__card__title title">{title}</h3>
             <p className="Features__cards__card__content">{content}</p>
           </div>
         ))}

@@ -4,13 +4,13 @@ import './Home.scss';
 import {
   // Benefits,
   // Contact,
-  // Examples,
   Features,
   // Footer,
   Hero,
   Navbar,
   // Pricing,
   // Testimonial,
+  CTO,
 } from '../components';
 
 function Home() {
@@ -19,6 +19,7 @@ function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <CTO />
     </div>
   );
 }

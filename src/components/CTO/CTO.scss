@@ -1,0 +1,76 @@
+@use '../../styles/variables.scss' as *;
+
+.CTO {
+  &__img {
+    background-image: url('../../assets/images/mulherComSorvete.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    // dark overlay
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: $text;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 20px;
+    z-index: 1;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Signika', sans-serif;
+    }
+
+    button {
+      background-color: $primary;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 0.5rem;
+      color: $text;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      margin-top: 1rem;
+      // center the button 
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+        background-color: $primary-light;
+        color: $text;
+      }
+    }
+
+    span {
+      color: $quaternary;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    &__content {
+      left: 50%;
+      &__title {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  }
+}
