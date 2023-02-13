@@ -1,3 +1,3 @@
 # finances-app
 
-Project link: [!here](https://finances-star.vercel.app/)
+Project link: [HERE](https://finances-star.vercel.app/)
