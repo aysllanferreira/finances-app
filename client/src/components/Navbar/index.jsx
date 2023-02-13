@@ -2,20 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import './Navbar.scss';
-
-const navItems = [
-  { name: 'Home', id: 'home' },
-  { name: 'Features', id: 'features' },
-  { name: 'Benefits', id: 'benefits' },
-  { name: 'Examples', id: 'examples' },
-  { name: 'Pricing', id: 'pricing' },
-  { name: 'Testimonial', id: 'testimonial' },
-  { name: 'Contact', id: 'contact' },
-];
+import navItems from '../../constants/navlink';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const scrollToId = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -39,7 +35,12 @@ function Navbar() {
       <ul className={isScrolled ? 'Nav_scrolled__items' : 'Navbar__items'}>
         {navItems.map((item) => (
           <li key={item.id}>
-            <button type="button">{item.name}</button>
+            <button
+              type="button"
+              onClick={() => scrollToId(item.id)}
+            >
+              {item.name}
+            </button>
           </li>
         ))}
       </ul>
