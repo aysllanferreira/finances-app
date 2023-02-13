@@ -5,7 +5,7 @@ import {
   // Benefits,
   // Contact,
   // Examples,
-  // Features,
+  Features,
   // Footer,
   Hero,
   Navbar,
@@ -18,6 +18,7 @@ function Home() {
     <div className="Home">
       <Navbar />
       <Hero />
+      <Features />
     </div>
   );
 }

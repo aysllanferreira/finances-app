@@ -3,9 +3,8 @@ import './Features.scss';
 
 function Features() {
   return (
-    <div>
-      Features
-
+    <div className="Features container">
+      <h1>Features</h1>
     </div>
   );
 }
