@@ -64,7 +64,15 @@ function Navbar() {
       <div className={isMenuOpen ? 'Navbar__mobile__items' : 'hidden'}>
         {navItems.map((item) => (
           <li key={item.id}>
-            <button type="button">{item.name}</button>
+            <button
+              type="button"
+              onClick={() => {
+                scrollToId(item.id);
+                setIsMenuOpen(false);
+              }}
+            >
+              {item.name}
+            </button>
           </li>
         ))}
       </div>
