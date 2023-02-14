@@ -1,4 +1,3 @@
-import Benefits from './Benefits';
 import Contact from './Contact';
 import Features from './Features';
 import Footer from './Footer';
@@ -9,7 +8,6 @@ import Testimonial from './Testimonial';
 import CTO from './CTO';
 
 export {
-  Benefits,
   Contact,
   Features,
   Footer,

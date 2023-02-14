@@ -2,13 +2,12 @@ import React from 'react';
 import './Home.scss';
 
 import {
-  // Benefits,
   // Contact,
   Features,
   // Footer,
   Hero,
   Navbar,
-  // Pricing,
+  Pricing,
   // Testimonial,
   CTO,
 } from '../components';
@@ -20,6 +19,7 @@ function Home() {
       <Hero />
       <Features />
       <CTO />
+      <Pricing />
     </div>
   );
 }
