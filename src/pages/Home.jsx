@@ -8,7 +8,7 @@ import {
   Hero,
   Navbar,
   Pricing,
-  // Testimonial,
+  Testimonial,
   CTO,
 } from '../components';
 
@@ -20,6 +20,7 @@ function Home() {
       <Features />
       <CTO />
       <Pricing />
+      <Testimonial />
     </div>
   );
 }

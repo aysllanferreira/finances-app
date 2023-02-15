@@ -1,1 +1,154 @@
-@use '../../styles/variables.scss'
+@use '../../styles/variables.scss' as *;
+
+.Testimonial {
+  background-color: $primary;
+  padding: 3.5rem 0;
+
+  &__content {
+    color: $text;
+
+    &__title {
+      font-size: 3rem;
+      font-weight: 600;
+      font-family: 'Signika', sans-serif;
+      margin-bottom: 1.5rem;
+      text-align: center;
+
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8rem;
+        height: 0.2rem;
+        background-color: $quinternary;
+      }
+    }
+
+    .Englobation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      margin: 0 auto;
+      height: 450px;
+    }
+
+    .goNext > .current {
+      animation: appear 0.5s ease-in-out;
+      @keyframes appear {
+        0% {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    .goPrev > .current {
+      animation: reappear 0.5s ease-in-out;
+      @keyframes reappear {
+        0% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &__caroulsel {
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+
+      .next {
+        display: none;
+      }
+
+      .previous {
+        display: none;
+      }
+
+      &__item {
+        &__content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          text-align: center;
+
+          &__image {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            object-fit: cover;
+          }
+
+          &__name{
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+          }
+
+          &__position{
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+          }
+
+          &__description{
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: $quinternary;
+        margin: 0 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: none;
+
+        &:hover {
+          background-color: $quaternary;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    &__content {
+      .Englobation {
+        width: 80%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__content {
+      .Englobation {
+        width: 100%;
+        height: 700px;
+      }
+    }
+  }
+}
