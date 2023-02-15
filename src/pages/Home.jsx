@@ -4,7 +4,7 @@ import './Home.scss';
 import {
   Contact,
   Features,
-  // Footer,
+  Footer,
   Hero,
   Navbar,
   Pricing,
@@ -22,6 +22,7 @@ function Home() {
       <Pricing />
       <Testimonial />
       <Contact />
+      <Footer />
     </div>
   );
 }

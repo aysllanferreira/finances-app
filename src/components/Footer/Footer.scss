@@ -1,1 +1,58 @@
-@use '../../styles/variables.scss'
+@use '../../styles/variables.scss' as *;
+
+.Footer {
+  background-color: $primary;
+  color: $text;
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  text-align: center;
+
+  span {
+    color: red;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    a {
+      margin: 0 0.5rem;
+      font-size: 2rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__linkedin {
+      color: #0077b5;
+
+      &:hover {
+        color: #0a66c2;
+      }
+    }
+
+    &__github {
+      color: #000;
+
+      &:hover {
+        color: #333;
+      }
+    }
+
+    &__instagram {
+      color: #e4405f;
+
+      &:hover {
+        color: #c1354b;
+      }
+    }
+
+    &__email {
+      color: #fff;
+
+      &:hover {
+        color: #e3e3e3;
+      }
+    }
+  }
+}
