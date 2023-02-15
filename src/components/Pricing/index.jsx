@@ -10,9 +10,7 @@ function Pricing() {
         <Card
           title="Basic"
           price="FREE"
-          desc="Free for life"
-          btnColour="#fff"
-          btnTextColour="#000"
+          desc="Get started with our free plan and experience the essentials."
           condition3={false}
           condition4={false}
           condition5={false}
@@ -21,9 +19,7 @@ function Pricing() {
         <Card
           title="Standard"
           price="$15.00/Month"
-          desc="Free for life"
-          btnColour="#fff"
-          btnTextColour="#000"
+          desc="Upgrade to our standard plan for advanced features and capabilities."
           condition4={false}
           condition5={false}
         />
@@ -31,9 +27,7 @@ function Pricing() {
         <Card
           title="Premium"
           price="$25.00/Month"
-          desc="Free for life"
-          btnColour="#fff"
-          btnTextColour="#000"
+          desc="Unlock the full potential with our premium plan exclusive benefits."
         />
       </div>
     </div>

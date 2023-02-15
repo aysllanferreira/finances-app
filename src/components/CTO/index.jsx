@@ -2,6 +2,10 @@ import React from 'react';
 import './CTO.scss';
 
 function CTO() {
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <section className="CTO">
       <div className="CTO__img">
@@ -31,7 +35,10 @@ function CTO() {
             <span>crucial</span>
             .
           </h2>
-          <button type="button">
+          <button
+            type="button"
+            onClick={() => scrollTo('pricing')}
+          >
             Get Started
           </button>
         </div>

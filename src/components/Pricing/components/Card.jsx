@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { AiOutlineCheck, AiOutlineClose } from 'react-icons/ai';
 
 function Card({
-  title, price, desc, btnColour, btnTextColour, condition1, condition2,
+  title, price, desc, condition1, condition2,
   condition3, condition4, condition5,
 }) {
   return (
@@ -19,30 +19,29 @@ function Card({
       </div>
       <ul className="Pricing__card__list">
         <li className="Pricing__card__list__item">
-          {condition1 ? <AiOutlineCheck /> : <AiOutlineClose />}
+          {condition1 ? <AiOutlineCheck style={{ color: 'green' }} /> : <AiOutlineClose style={{ color: 'red' }} />}
           <span>More than 160 currencies</span>
         </li>
         <li className="Pricing__card__list__item">
-          {condition2 ? <AiOutlineCheck /> : <AiOutlineClose />}
+          {condition2 ? <AiOutlineCheck style={{ color: 'green' }} /> : <AiOutlineClose style={{ color: 'red' }} />}
           <span>Real-time stock market</span>
         </li>
         <li className="Pricing__card__list__item">
-          {condition3 ? <AiOutlineCheck /> : <AiOutlineClose />}
+          {condition3 ? <AiOutlineCheck style={{ color: 'green' }} /> : <AiOutlineClose style={{ color: 'red' }} />}
           <span>Export to Excel, pdf, csv or xml</span>
         </li>
         <li className="Pricing__card__list__item">
-          {condition4 ? <AiOutlineCheck /> : <AiOutlineClose />}
+          {condition4 ? <AiOutlineCheck style={{ color: 'green' }} /> : <AiOutlineClose style={{ color: 'red' }} />}
           <span>Full detailed report</span>
         </li>
         <li className="Pricing__card__list__item">
-          {condition5 ? <AiOutlineCheck /> : <AiOutlineClose />}
+          {condition5 ? <AiOutlineCheck style={{ color: 'green' }} /> : <AiOutlineClose style={{ color: 'red' }} />}
           <span>Support 24hs</span>
         </li>
       </ul>
       <button
         type="button"
-        className="Pricing__card__button"
-        style={{ backgroundColor: btnColour, color: btnTextColour }}
+        className="Pricing__card__buttons"
       >
         Get Started
       </button>
@@ -51,8 +50,6 @@ function Card({
 }
 
 Card.defaultProps = {
-  btnColour: '#fff',
-  btnTextColour: '#000',
   condition1: true,
   condition2: true,
   condition3: true,
@@ -64,8 +61,6 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  btnColour: PropTypes.string,
-  btnTextColour: PropTypes.string,
   condition1: PropTypes.bool,
   condition2: PropTypes.bool,
   condition3: PropTypes.bool,
