@@ -17,7 +17,7 @@ function Testimonial() {
     setDirection('prev');
   };
   return (
-    <div className="Testimonial">
+    <div className="Testimonial" id="testimonial">
       <div className="Testimonial__content">
         <h1 className="Testimonial__content__title">Testimonials</h1>
         <div className="Englobation">
