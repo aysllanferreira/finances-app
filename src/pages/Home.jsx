@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.scss';
 
 import {
-  // Contact,
+  Contact,
   Features,
   // Footer,
   Hero,
@@ -21,6 +21,7 @@ function Home() {
       <CTO />
       <Pricing />
       <Testimonial />
+      <Contact />
     </div>
   );
 }
