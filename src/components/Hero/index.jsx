@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import './Hero.scss';
 
 function Hero() {
@@ -10,11 +11,31 @@ function Hero() {
     <div>
       <div className="Hero" id="home" />
       <div className="Hero_Content">
-        <h1 className="Hero_Content__title">Finance Star</h1>
-        <h2 className="Hero_Content__subtitle">Control your financial life in one place.</h2>
-        <button type="button" className="Hero_Content__button" onClick={() => scrollTo('pricing')}>
-          Get Started
-        </button>
+        <AnimationOnScroll
+          animateIn="animate__fadeInDown"
+          animateOnce
+          delay={100}
+        >
+          <h1 className="Hero_Content__title">Finance Star</h1>
+        </AnimationOnScroll>
+
+        <AnimationOnScroll
+          animateIn="animate__lightSpeedInLeft"
+          animateOnce
+          delay={200}
+        >
+          <h2 className="Hero_Content__subtitle">Control your financial life in one place.</h2>
+        </AnimationOnScroll>
+
+        <AnimationOnScroll
+          animateIn="animate__zoomInUp"
+          animateOnce
+          delay={300}
+        >
+          <button type="button" className="Hero_Content__button" onClick={() => scrollTo('pricing')}>
+            Get Started
+          </button>
+        </AnimationOnScroll>
       </div>
     </div>
   );
